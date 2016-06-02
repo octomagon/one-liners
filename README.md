@@ -5,6 +5,7 @@ A place for me to put my stuff... meaning bash one-liners.
 - [bash](#bash)
 - [ffmpeg](#ffmpeg)
 - [gpg](#gpg)
+- [mysql](#mysql)
 - [nmap](#nmap)
 - [openssl](#openssl)
 - [slowhttptest](#slowhttptest)
@@ -46,6 +47,11 @@ gpg-zip -c -o file.gpg dirname
 gpg-zip -d file.gpg
 ```
 
+##### mysql
+Print a MySQL performance report via tcpdump & Percona Toolkit
+```
+tcpdump -s 65535 -x -nn -q -tttt -i eth0 -c 30000 port 3306 | pt-query-digest --report-format profile --type tcpdump
+```
 
 ##### nmap
 Scan for open SSH ports.
