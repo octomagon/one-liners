@@ -4,6 +4,7 @@ A place for me to put my stuff... meaning bash one-liners.
 
 - [bash](#bash)
 - [ffmpeg](#ffmpeg)
+- [git](#git)
 - [gpg](#gpg)
 - [mysql](#mysql)
 - [nmap](#nmap)
@@ -33,6 +34,12 @@ Combine video and subtitles into an MKV file.
 brew install mkvtoolnix
 mkvmerge -o movie.mkv movie.avi english.srt
 mkvmerge -o output.mkv input.mkv --language 0:ger --track-name 0:German subs.srt
+```
+
+##### git
+Add git lg for a pretty commit history
+```
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
 ##### gpg
