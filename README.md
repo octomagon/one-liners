@@ -23,6 +23,10 @@ Batch file rename
 ```bash
 for i in *.mp4; do mv "$i" "${i/s01/s00}"; done
 ```
+List all available commands
+```
+compgen -c
+```
 
 ##### ffmpeg
 Batch convert mkvs to mp4s
