@@ -27,6 +27,10 @@ List all available commands
 ```
 compgen -c
 ```
+Error out of a bash script if not being run by root
+```
+if [[ $EUID -ne 0 ]]; then echo "You must be root."; exit 1; fi
+```
 
 ##### ffmpeg
 Batch convert mkvs to mp4s
