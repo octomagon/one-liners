@@ -41,7 +41,7 @@ Combine video and subtitles into an MKV file.
 ```
 brew install mkvtoolnix
 mkvmerge -o movie.mkv movie.avi english.srt
-mkvmerge -o output.mkv input.mkv --language 0:ger --track-name 0:German subs.srt
+mkvmerge -o output.mkv input.mkv --language 0:eng --track-name 0:English subs.srt
 ```
 
 ##### git
