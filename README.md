@@ -43,6 +43,10 @@ Commit changes
 ```
 docker commit -m "What did you do to the image" -a "Author Name" container-id repository/new_image_name
 ```
+Delete all exited containers
+```
+docker rm $(docker ps -a -q -f status=exited)
+```
 
 ##### ffmpeg
 Batch convert mkvs to mp4s
