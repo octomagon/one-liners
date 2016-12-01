@@ -37,7 +37,7 @@ if [[ $EUID -ne 0 ]]; then echo "You must be root."; exit 1; fi
 Pull and start a bare-bones CentOS container.
 ```
 docker pull centos
-docker run -it centos /bin/bash
+docker run -it centos
 ```
 
 ##### ffmpeg
