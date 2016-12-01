@@ -39,6 +39,10 @@ Pull and start a bare-bones CentOS container.
 docker pull centos
 docker run -it centos
 ```
+Commit changes
+```
+docker commit -m "What did you do to the image" -a "Author Name" container-id repository/new_image_name
+```
 
 ##### ffmpeg
 Batch convert mkvs to mp4s
