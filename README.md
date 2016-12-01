@@ -3,6 +3,7 @@
 A place for me to put my stuff... meaning bash one-liners.
 
 - [bash](#bash)
+- [docker](#docker)
 - [ffmpeg](#ffmpeg)
 - [git](#git)
 - [gpg](#gpg)
@@ -30,6 +31,13 @@ compgen -c
 Error out of a bash script if not being run by root
 ```
 if [[ $EUID -ne 0 ]]; then echo "You must be root."; exit 1; fi
+```
+
+##### docker
+Pull and start a bare-bones CentOS container.
+```
+docker pull centos
+docker run -it centos /bin/bash
 ```
 
 ##### ffmpeg
