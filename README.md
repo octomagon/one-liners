@@ -47,6 +47,12 @@ Delete all exited containers
 ```
 docker rm $(docker ps -a -q -f status=exited)
 ```
+Import & export a docker image
+```
+docker save -o <save image to path> <image name>
+docker load -i <path to image tar file>
+```
+
 
 ##### ffmpeg
 Batch convert mkvs to mp4s
