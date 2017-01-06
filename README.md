@@ -59,6 +59,10 @@ Batch convert mkvs to mp4s
 ```
 for i in *.mkv; do ffmpeg -i ${i} -c:v copy -c:a copy ${i/\.mkv/\.mp4}; done
 ```
+Combine audio & video files
+```
+ffmpeg -i video.mp4 -i audio.m4a -c:v copy -c:a copy output.mp4
+```
 Combine video and subtitles into an MKV file.
 ```
 brew install mkvtoolnix
