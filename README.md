@@ -16,6 +16,14 @@ A place for me to put my stuff... meaning bash one-liners.
 - [wireshark](#wireshark)
 
 ##### bash
+List files in a dir with too many files.
+```
+ls -1 -f
+```
+...and delete them.
+```
+ls -1 -f | xargs rm
+```
 Find all setuid programs on a computer.
 ```
 sudo find / -xdev \( -perm -4000 \) -type f -print0 | xargs -0 ls -l
