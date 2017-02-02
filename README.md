@@ -3,6 +3,7 @@
 A place for me to put my stuff... meaning bash one-liners.
 
 - [bash](#bash)
+- [cisco](#cisco)
 - [docker](#docker)
 - [ffmpeg](#ffmpeg)
 - [git](#git)
@@ -39,6 +40,12 @@ compgen -c
 Error out of a bash script if not being run by root
 ```
 if [[ $EUID -ne 0 ]]; then echo "You must be root."; exit 1; fi
+```
+
+##### cisco
+Show active interfaces
+```
+show int status | inc connected
 ```
 
 ##### docker
