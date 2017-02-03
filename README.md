@@ -47,6 +47,10 @@ Show active interfaces
 ```
 show int status | inc connected
 ```
+Show connected Cisco devices
+```
+sh cdp neighbors
+```
 
 ##### docker
 Pull and start a bare-bones CentOS container.
