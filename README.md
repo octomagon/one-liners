@@ -43,6 +43,7 @@ Error out of a bash script if not being run by root
 if [[ $EUID -ne 0 ]]; then echo "You must be root."; exit 1; fi
 ```
 
+- - -
 ##### cisco
 Show active interfaces
 ```
@@ -53,6 +54,7 @@ Show connected Cisco devices
 sh cdp neighbors
 ```
 
+- - -
 ##### docker
 Pull and start a bare-bones CentOS container.
 ```
@@ -73,7 +75,7 @@ docker save -o <save image to path> <image name>
 docker load -i <path to image tar file>
 ```
 
-
+- - -
 ##### ffmpeg
 Batch convert mkvs to mp4s
 ```
@@ -90,12 +92,14 @@ mkvmerge -o movie.mkv movie.avi english.srt
 mkvmerge -o output.mkv input.mkv --language 0:eng --track-name 0:English subs.srt
 ```
 
+- - -
 ##### git
 Add git lg for a pretty commit history
 ```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
+- - -
 ##### gpg
 Encrypt and decrypt a file
 ```
@@ -108,30 +112,35 @@ gpg-zip -c -o file.gpg dirname
 gpg-zip -d file.gpg
 ```
 
+- - -
 ##### macos
 Enable VNC from the command line
 ```
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
 ```
 
+- - -
 ##### mysql
 Print a MySQL performance report via tcpdump & Percona Toolkit
 ```
 tcpdump -s 65535 -x -nn -q -tttt -i eth0 -c 30000 port 3306 | pt-query-digest --report-format profile --type tcpdump
 ```
 
+- - -
 ##### nmap
 Scan for open SSH ports.
 ```bash
 nmap -p22 --open -PN -sV -oG ssh_hosts 10.0.0.0/24
 ```
 
+- - -
 ##### openssl
 Check the expiration date of an SSL certificate.
 ```bash
 echo | openssl s_client -connect google.com:443 2>/dev/null | openssl x509 -noout -dates
 ```
 
+- - -
 ##### slowhttptest
 
 ###### Slowloris mode
@@ -139,7 +148,6 @@ echo | openssl s_client -connect google.com:443 2>/dev/null | openssl x509 -noou
 slowhttptest -c 1000 -H -i 10 -r 200 -t GET -u http://localhost:8080 -x 24 -p 3
 ```
 Out of the box apache being attacked by this will have their process table filled with "R" (Reading Request) and will quickly become unresponsive.  An nginx reverse proxy blocks this attack.
-
 
 ###### Slow message body
 ```
@@ -154,6 +162,7 @@ slowhttptest -R -u http://localhost:8080 -t HEAD -c 1000 -a 10 -b 3000 -r 500
 ```
 This attack is effectively invisible to the apache process table and does not appear to directly effect the site being attacked.  However, it causes apache CPU usage on the host to go up considerably.  An nginx reverse proxy blocks this attack.
 
+- - -
 ##### ssh
 Ghetto VPN
 ```bash
@@ -166,12 +175,14 @@ Tunnel a remote port to a local one
 ssh  -L 6999:localhost:5900 username@remotehost
 ```
 
+- - -
 ##### watch
 Alert with a beep when an address is unresponsive.
 ```bash
 watch -b ping -c 1 -t 2 google.com
 ```
 
+- - -
 ##### wireshark
 Decode non-standard port as HTTP and show fields
 ```
