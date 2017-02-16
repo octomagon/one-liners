@@ -8,6 +8,7 @@ A place for me to put my stuff... meaning bash one-liners.
 - [ffmpeg](#ffmpeg)
 - [git](#git)
 - [gpg](#gpg)
+- [macos](#macos)
 - [mysql](#mysql)
 - [nmap](#nmap)
 - [openssl](#openssl)
@@ -107,6 +108,12 @@ gpg-zip -c -o file.gpg dirname
 gpg-zip -d file.gpg
 ```
 
+##### macos
+Enable VNC from the command line
+```
+sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
+```
+
 ##### mysql
 Print a MySQL performance report via tcpdump & Percona Toolkit
 ```
@@ -153,6 +160,11 @@ Ghetto VPN
 ssh -D 7070 remotehost
 ```
 Then set your SOCKS proxy as localhost:7070
+
+Tunnel a remote port to a local one
+```
+ssh  -L 6999:localhost:5900 username@remotehost
+```
 
 ##### watch
 Alert with a beep when an address is unresponsive.
