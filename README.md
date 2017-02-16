@@ -17,7 +17,7 @@ A place for me to put my stuff... meaning bash one-liners.
 - [watch](#watch)
 - [wireshark](#wireshark)
 
-##### bash
+### bash
 List files in a dir with too many files.
 ```
 ls -1 -f
@@ -44,7 +44,7 @@ if [[ $EUID -ne 0 ]]; then echo "You must be root."; exit 1; fi
 ```
 
 - - -
-##### cisco
+### cisco
 Show active interfaces
 ```
 show int status | inc connected
@@ -55,7 +55,7 @@ sh cdp neighbors
 ```
 
 - - -
-##### docker
+### docker
 Pull and start a bare-bones CentOS container.
 ```
 docker pull centos
@@ -76,7 +76,7 @@ docker load -i <path to image tar file>
 ```
 
 - - -
-##### ffmpeg
+### ffmpeg
 Batch convert mkvs to mp4s
 ```
 for i in *.mkv; do ffmpeg -i ${i} -c:v copy -c:a copy ${i/\.mkv/\.mp4}; done
@@ -93,14 +93,14 @@ mkvmerge -o output.mkv input.mkv --language 0:eng --track-name 0:English subs.sr
 ```
 
 - - -
-##### git
+### git
 Add git lg for a pretty commit history
 ```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
 - - -
-##### gpg
+### gpg
 Encrypt and decrypt a file
 ```
 gpg -c filename
@@ -113,35 +113,35 @@ gpg-zip -d file.gpg
 ```
 
 - - -
-##### macos
+### macos
 Enable VNC from the command line
 ```
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
 ```
 
 - - -
-##### mysql
+### mysql
 Print a MySQL performance report via tcpdump & Percona Toolkit
 ```
 tcpdump -s 65535 -x -nn -q -tttt -i eth0 -c 30000 port 3306 | pt-query-digest --report-format profile --type tcpdump
 ```
 
 - - -
-##### nmap
+### nmap
 Scan for open SSH ports.
 ```bash
 nmap -p22 --open -PN -sV -oG ssh_hosts 10.0.0.0/24
 ```
 
 - - -
-##### openssl
+### openssl
 Check the expiration date of an SSL certificate.
 ```bash
 echo | openssl s_client -connect google.com:443 2>/dev/null | openssl x509 -noout -dates
 ```
 
 - - -
-##### slowhttptest
+### slowhttptest
 
 ###### Slowloris mode
 ```
@@ -163,7 +163,7 @@ slowhttptest -R -u http://localhost:8080 -t HEAD -c 1000 -a 10 -b 3000 -r 500
 This attack is effectively invisible to the apache process table and does not appear to directly effect the site being attacked.  However, it causes apache CPU usage on the host to go up considerably.  An nginx reverse proxy blocks this attack.
 
 - - -
-##### ssh
+### ssh
 Ghetto VPN
 ```bash
 ssh -D 7070 remotehost
@@ -176,14 +176,14 @@ ssh  -L 6999:localhost:5900 username@remotehost
 ```
 
 - - -
-##### watch
+### watch
 Alert with a beep when an address is unresponsive.
 ```bash
 watch -b ping -c 1 -t 2 google.com
 ```
 
 - - -
-##### wireshark
+### wireshark
 Decode non-standard port as HTTP and show fields
 ```
 tshark port 4567 -d tcp.port==4567,http -T fields -e ip.src -e http.x_forwarded_for -e tcp.dstport -e http.user_agent -e http.request.uri
