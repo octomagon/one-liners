@@ -42,7 +42,10 @@ Error out of a bash script if not being run by root
 ```
 if [[ $EUID -ne 0 ]]; then echo "You must be root."; exit 1; fi
 ```
-
+In case your shell session went insane (some script or application turned it into a garbled mess).
+```
+stty sane
+```
 - - -
 ### cisco
 Show active interfaces
