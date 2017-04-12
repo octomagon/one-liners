@@ -56,6 +56,10 @@ Show connected Cisco devices
 ```
 sh cdp neighbors
 ```
+Show logged in AnyConnect users on a Cisco ASA
+```
+sh vpn-sessiondb svc
+```
 
 - - -
 ### docker
