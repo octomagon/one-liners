@@ -13,6 +13,7 @@ A place for me to put my stuff... meaning bash one-liners.
 - [nmap](#nmap)
 - [openssl](#openssl)
 - [slowhttptest](#slowhttptest)
+- [srtedit](#srtedit)
 - [ssh](#ssh)
 - [watch](#watch)
 - [wireshark](#wireshark)
@@ -168,6 +169,16 @@ Out of the box apache being attacked by this will have their process table fille
 slowhttptest -R -u http://localhost:8080 -t HEAD -c 1000 -a 10 -b 3000 -r 500
 ```
 This attack is effectively invisible to the apache process table and does not appear to directly effect the site being attacked.  However, it causes apache CPU usage on the host to go up considerably.  An nginx reverse proxy blocks this attack.
+- - -
+### srtedit
+Delay an srt file by n milliseconds
+```
+srtedit TVShow.S03E02.eng.srt -D 600
+```
+Hasten an srt file by n milliseconds
+```
+srtedit TVShow.S03E02.eng.srt -H 600
+```
 
 - - -
 ### ssh
