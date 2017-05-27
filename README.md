@@ -61,6 +61,10 @@ Show logged in AnyConnect users on a Cisco ASA
 ```
 sh vpn-sessiondb svc
 ```
+Trace MAC address to a port
+```
+show mac address-table | inc 0016.3e17.7369
+```
 
 - - -
 ### docker
