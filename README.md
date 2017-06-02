@@ -5,6 +5,7 @@ A place for me to put my stuff... meaning bash one-liners.
 - [bash](#bash)
 - [cisco](#cisco)
 - [docker](#docker)
+- [elasticsearch](#elasticsearch)
 - [ffmpeg](#ffmpeg)
 - [git](#git)
 - [gpg](#gpg)
@@ -86,6 +87,18 @@ Import & export a docker image
 docker save -o <save image to path> <image name>
 docker load -i <path to image tar file>
 ```
+
+- - -
+### elasticsearch
+List indices via curl
+```
+curl -XGET "localhost:9200/_cat/indices?v"
+```
+Delete indexes for day
+```
+curl -XDELETE "localhost:9200/*-2017.06.02"
+```
+
 
 - - -
 ### ffmpeg
