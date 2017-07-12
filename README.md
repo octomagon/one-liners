@@ -9,6 +9,7 @@ A place for me to put my stuff... meaning bash one-liners.
 - [ffmpeg](#ffmpeg)
 - [git](#git)
 - [gpg](#gpg)
+- [hpacucli](#hpacucli)
 - [macos](#macos)
 - [mysql](#mysql)
 - [nmap](#nmap)
@@ -135,6 +136,13 @@ Encrypt and decrypt a folder
 ```
 gpg-zip -c -o file.gpg dirname
 gpg-zip -d file.gpg
+```
+
+- - -
+### hpacucli
+Check the status of an HP Smart Array (RAID)
+```
+sudo hpacucli ctrl all show config
 ```
 
 - - -
