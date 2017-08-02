@@ -75,6 +75,10 @@ Pull and start a bare-bones CentOS container.
 docker pull centos
 docker run -it centos
 ```
+Run the stock nginx container
+```
+docker run -p 8080:80 -d nginx
+```
 Commit changes
 ```
 docker commit -m "What did you do to the image" -a "Author Name" container-id repository/new_image_name
