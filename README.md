@@ -4,6 +4,7 @@ A place for me to put my stuff... meaning bash one-liners.
 
 - [bash](#bash)
 - [cisco](#cisco)
+- [defaults](#defaults)
 - [docker](#docker)
 - [elasticsearch](#elasticsearch)
 - [ffmpeg](#ffmpeg)
@@ -70,6 +71,13 @@ sh vpn-sessiondb svc
 Trace MAC address to a port
 ```
 show mac address-table | inc 0016.3e17.7369
+```
+
+- - -
+### defaults
+Enable slow-motion minimize and maximize
+```
+defaults write com.apple.dock slow-motion-allowed -bool YES && killall Dock
 ```
 
 - - -
