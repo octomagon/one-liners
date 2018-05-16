@@ -72,6 +72,10 @@ Trace MAC address to a port
 ```
 show mac address-table | inc 0016.3e17.7369
 ```
+Resequence extended ACL
+```
+ip access-list resequence 69 10 10
+```
 
 - - -
 ### defaults
