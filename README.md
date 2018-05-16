@@ -137,6 +137,11 @@ brew install mkvtoolnix
 mkvmerge -o movie.mkv movie.avi english.srt
 mkvmerge -o output.mkv input.mkv --language 0:eng --track-name 0:English subs.srt
 ```
+Strip out unwanted audio & subtitles
+```
+mkvmerge --identify-verbose Buffy.the.Vampire.Slayer.1992.mkv
+mkvmerge -o Buffy.the.Vampire.Slayer.1992.new.mkv -a 3 -s 7 Buffy.the.Vampire.Slayer.1992.mkv
+```
 
 - - -
 ### git
