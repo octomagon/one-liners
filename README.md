@@ -40,7 +40,7 @@ for i in *.mp4; do mv "$i" "${i/s01/s00}"; done
 ```
 Find all files modified in the last hour, recursively, with details.
 ```
-find . -mmin -60 -type f -exec ls -lh {} +
+find . -mmin -60 -type f -exec ls -lhS {} +
 ```
 List all available commands
 ```
