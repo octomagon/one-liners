@@ -76,6 +76,10 @@ Resequence extended ACL
 ```
 ip access-list resequence 69 10 10
 ```
+Show high traffic IPs
+```
+sh ip flow top-talkers
+```
 
 - - -
 ### defaults
