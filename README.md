@@ -247,6 +247,11 @@ Tunnel a remote port to a local one
 ssh  -L 6999:localhost:5900 username@remotehost
 ```
 
+Mount a directory over ssh
+```
+sudo sshfs -o allow_other,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 user@host:/DirToMount /localMountPoint
+```
+
 - - -
 ### watch
 Alert with a beep when an address is unresponsive.
