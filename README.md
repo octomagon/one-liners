@@ -7,6 +7,7 @@ A place for me to put my stuff... meaning bash one-liners.
 - [defaults](#defaults)
 - [docker](#docker)
 - [elasticsearch](#elasticsearch)
+- [exiftool](#exiftool)
 - [ffmpeg](#ffmpeg)
 - [git](#git)
 - [gpg](#gpg)
@@ -124,6 +125,12 @@ Delete indexes for day
 curl -XDELETE "localhost:9200/*-2017.06.02"
 ```
 
+- - -
+### exiftool
+Remove all metadata from an image
+```
+exiftool -all= image.jpg
+```
 
 - - -
 ### ffmpeg
