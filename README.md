@@ -254,6 +254,11 @@ Tunnel a remote port to a local one
 ssh  -L 6999:localhost:5900 username@remotehost
 ```
 
+Tunnel port 3128 on localhost to port 8080 on remoteHost.
+```
+ssh -R 8080:localhost:3128 remoteHost
+```
+
 Mount a directory over ssh
 ```
 sudo sshfs -o allow_other,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 user@host:/DirToMount /localMountPoint
