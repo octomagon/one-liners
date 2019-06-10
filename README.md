@@ -187,6 +187,10 @@ Enable VNC from the command line
 ```
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
 ```
+Find memory leaks in a program.
+```
+sudo leaks -atExit -- ./a.out
+```
 
 - - -
 ### mysql
