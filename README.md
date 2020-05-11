@@ -199,6 +199,13 @@ Print a MySQL performance report via tcpdump & Percona Toolkit
 tcpdump -s 65535 -x -nn -q -tttt -i eth0 -c 30000 port 3306 | pt-query-digest --report-format profile --type tcpdump
 ```
 
+Take a dump
+```
+mysqldump --master-data --single-transaction --add-drop-database --routines --all-databases 2>> $BACKUPDIR/error_dump.log | gzip > $BACKUPDIR/fulldump_$(date +%F).sql.gz
+# --dump-slave to get master's position
+# --master-data to get the slave's position
+```
+
 - - -
 ### nmap
 Scan for open SSH ports.
