@@ -192,6 +192,11 @@ Find memory leaks in a program.
 sudo leaks -atExit -- ./a.out
 ```
 
+Extract phone #s from an Address Book .abcddb file
+```
+sqlite3 -csv -header AddressBook-v22.abcddb "SELECT ZABCDRECORD.ZFIRSTNAME AS 'First Name', ZABCDRECORD.ZLASTNAME AS 'Last Name', ZABCDPHONENUMBER.ZFULLNUMBER AS 'Phone' FROM ZABCDRECORD INNER JOIN ZABCDPHONENUMBER ON ZABCDPHONENUMBER.ZOWNER = ZABCDRECORD.Z_PK;" | sort > phone.csv
+```
+
 - - -
 ### mysql
 Print a MySQL performance report via tcpdump & Percona Toolkit
