@@ -134,6 +134,16 @@ exiftool -all= image.jpg
 
 - - -
 ### ffmpeg
+
+Compress a video in H.265 format.
+```
+ffmpeg -i input.mkv -map 0 -c:s copy -c:v libx265 -crf 20 output.mkv
+```
+- `-map 0` Maps all streams; Ensures all video, audio & subtitles are included.
+- `-c:s copy` Copies subtitles as-is instead of converting them.
+- `-c:v libx265` Compress video using H.265 codec.
+- `-crf 20` Video quality.  Lower is better. 18 is considered *visually lossless*.
+
 Batch convert mkvs to mp4s
 ```
 for i in *.mkv; do ffmpeg -i ${i} -c:v copy -c:a copy ${i/\.mkv/\.mp4}; done
