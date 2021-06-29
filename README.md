@@ -43,6 +43,11 @@ Find all files modified in the last hour, recursively, with details.
 ```
 find . -mmin -60 -type f -exec ls -lhS {} +
 ```
+Recursively tail multiple files
+```
+tail -f **/*.log
+tail -f **/*
+```
 List all available commands
 ```
 compgen -c
