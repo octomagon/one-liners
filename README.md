@@ -31,6 +31,10 @@ ls -1 -f
 ```
 ls -1 -f | xargs rm
 ```
+Process list with custom columns
+```bash
+ps xao pid,ppid,stime,cmd
+```
 Find all setuid programs on a computer.
 ```
 sudo find / -xdev \( -perm -4000 \) -type f -print0 | xargs -0 ls -l
