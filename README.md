@@ -179,6 +179,10 @@ Add git lg for a pretty commit history
 ```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
+Commit using a name & email just for this commit
+```
+git -c "user.name=YOURNAME" -c "user.email=poop@gmail.com" commit
+```
 
 - - -
 ### gpg
