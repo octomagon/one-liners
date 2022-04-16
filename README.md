@@ -144,6 +144,11 @@ exiftool -all= image.jpg
 - - -
 ### ffmpeg
 
+Batch convert FLAC to ALAC
+```
+for i in *.flac; do ffmpeg -i "$i" -c:v copy -c:a alac "${i%.*}.m4a"; done
+```
+
 Compress a video in H.265 format.
 ```
 ffmpeg -i input.mkv -map 0 -c:s copy -c:v libx265 -crf 20 output.mkv
